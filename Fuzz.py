@@ -10,7 +10,7 @@ end = "\r\n"
 buffer = cmd + junk + end
 
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-s.connect(('ip',port))
+s.connect(('127.0.0.1',9999))
 data = s.recv(1024)
 s.send(buffer)
 s.recv(1024)
